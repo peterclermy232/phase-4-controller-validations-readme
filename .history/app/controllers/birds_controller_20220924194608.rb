@@ -13,8 +13,8 @@ class BirdsController < ApplicationController
     #if bird.valid?
    # render json: bird, status: :created
    # else
-    #  render json: { errors: bird.errors}, status: :unprocessable_entity
-     # end
+      render json: { errors: bird.errors}, status: :unprocessable_entity
+      end
       #alternative
     rescue ActiveRecord::RecordInvalid => invalid
       render json: { errors: invalid.record.errors }, status: :unprocessable_entity
